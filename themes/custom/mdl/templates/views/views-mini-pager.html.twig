@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for a views mini-pager.
+ *
+ * Available variables:
+ * - items: List of pager items.
+ *
+ * @see template_preprocess_views_mini_pager()
+ */
+#}
+{% if items.previous or items.next %}
+  <div class="mdl-cell mdl-cell--12-col">
+    <nav class="bs-nav-next">
+      {% if items.previous %}
+      <a href="{{ items.previous.href }}" class="bs-nav-next__button bs-nav-next__left-button">
+	<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp" role="presentation">
+	  <i class="material-icons">arrow_back</i>
+	</button>
+      </a>
+      {% endif %}
+      {% if items.next %}
+      <a href="{{ items.next.href }}" class="bs-nav-next__button bs-nav-next__right-button">
+	<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp" role="presentation">
+	  <i class="material-icons">arrow_forward</i>
+	</button>
+      </a>
+      {% endif %}
+    </nav>
+  </div>
+{% endif %}
