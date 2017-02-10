@@ -40,5 +40,7 @@ rm $DUMP_PATH/sites/default/settings.php
 mv $DUMP_PATH/sites/default/settings.new.php $DUMP_PATH/sites/default/settings.php
 
 # Compress everything
-tar -c $DUMP_PATH/* | bzip2 -z9 > $DUMP_PATH/migrate.tar.bz2
-find $DUMP_PATH/ ! -name migrate.tar.bz2 -delete
+tar -cC $DUMP_PATH database-stripped.sql sites vendor | bzip2 -z9 > $DUMP_PATH/migrate.tar.bz2
+rm -rf $DUMP_PATH/vendor
+rm -rf $DUMP_PATH/sites
+rm $DUMP_PATH/database-stripped.sql
