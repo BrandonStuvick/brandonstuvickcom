@@ -45,7 +45,7 @@
 #}
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
+  <header class="mdl-layout__header mdl-layout__header--scoll bs-header-height-56px">
     {{ page.header }}
   </header>
 
@@ -73,8 +73,12 @@
 	      <label class="mdl-textfield__label" for="Email">Email...</label>
 	    </div>
 	    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	      <input class="mdl-textfield__input" type="text" id="Subject">
+	      <label class="mdl-textfield__label" for="Email">Subject...</label>
+	    </div>
+	    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 	      <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
-	      <label class="mdl-textfield__label" for="note">Enter note</label>
+	      <label class="mdl-textfield__label" for="note">Body...</label>
 	    </div>
 	    <p>
 	      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="su

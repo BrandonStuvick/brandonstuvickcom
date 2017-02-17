@@ -45,13 +45,14 @@
 #}
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
+  <header class="mdl-layout__header mdl-layout__header--scroll bs-header-height-56px">
     {{ page.header }}
   </header>
 
   {{ page.drawer }}
 
-  <main class="mdl-layout__content">
+
+  <main class="mdl-layout__content">    
     {{ page.content }}
 
     {% if page.footer %}

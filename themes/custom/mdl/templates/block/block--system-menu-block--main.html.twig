@@ -32,8 +32,10 @@
  */
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</nav>
+<div class="mdl-layout__header-row bs-navigation-row mdl-layout--large-screen-only bs-max-width">
+  <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </nav>
+</div>
