@@ -18,7 +18,9 @@ mkdir $DUMP_PATH/sites
 mkdir $DUMP_PATH/sites/default
 cp -r sites/default/files $DUMP_PATH/sites/default/
 cp sites/default/settings.php $DUMP_PATH/sites/default/
+mkdir $DUMP_PATH/core
 cp -r vendor $DUMP_PATH/
+cp -r core/assets $DUMP_PATH/core/
 
 # Strip installation specific database settings out
 sed -i -e "s/^ *'database'.*/  'database' => '',/"  -e "s/^ *'username'.*/  'username' => '',/"  -e "s/^ *'password'.*/  'password' => '',/" $DUMP_PATH/sites/default/settings.php
@@ -42,5 +44,6 @@ mv $DUMP_PATH/sites/default/settings.new.php $DUMP_PATH/sites/default/settings.p
 # Compress everything
 tar -cC $DUMP_PATH database-stripped.sql sites vendor | bzip2 -z9 > $DUMP_PATH/migrate.tar.bz2
 rm -rf $DUMP_PATH/vendor
+rm -rf $DUMP_PATH/core
 rm -rf $DUMP_PATH/sites
 rm $DUMP_PATH/database-stripped.sql
