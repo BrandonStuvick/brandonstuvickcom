@@ -3,7 +3,24 @@
 /* Make the site header a proper size */
 #block-bootstrap-business-branding { padding-bottom: 0px; }
 
-/* fix the width of content to a readable length */
+/* fix the width of content blocks for readability  */
 #main-content > .container {
-	max-width: 900px;
+	max-width: 800px;
+}
+
+/* make padding smaller on article content such that it looks better on mobile */
+#block-bootstrap-business-page-title {
+	padding-bottom: 0px;
+}
+#block-bootstrap-business-page-title > .content > .page-title {
+	padding-left: 24px !important;
+	padding-right: 24px !important;
+}
+.node--type-article > header { 
+	padding-left: 24px !important;
+	padding-right: 24px !important;
+}
+.node--type-article > div {
+	padding-left: 24px !important;
+	padding-right: 24px !important;
 }
