@@ -1,0 +1,9 @@
+/* Custom CSS overrides */
+
+/* Make the site header a proper size */
+#block-bootstrap-business-branding { padding-bottom: 0px; }
+
+/* fix the width of content to a readable length */
+#main-content > .container {
+	max-width: 900px;
+}
